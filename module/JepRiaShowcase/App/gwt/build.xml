@@ -60,7 +60,7 @@
   <path id="libs">
     <pathelement location="${COMMONS-FILEUPLOAD_LIB}" />
     <pathelement location="${JEPRIA-AUTO_LIB}" />
-    <pathelement location="${JEPRIA_LIB}" />
+    <pathelement location="${JEPRIA-GWT_LIB}" />
     <pathelement location="${JEPRIA-REPORT_LIB}" />
     <pathelement location="${JEPRIA-TEST_LIB}" />
     <pathelement location="${SSO-UTILS_LIB}" />
@@ -79,7 +79,7 @@
     <pathelement location="${FREEMARKER_LIB}" />
     <pathelement location="${JAVAPARSER-CORE_LIB}" />
     <pathelement location="${JEPRIA-TOOLKIT_LIB}" />
-    <pathelement location="${JEPRIA_LIB}" />
+    <pathelement location="${JEPRIA-GWT_LIB}" />
     <pathelement location="${XERCESIMPL_LIB}" />
   </path>
 
@@ -529,7 +529,7 @@
         <pathelement location="${JAVASSIST_LIB}" />
         <pathelement location="${GWT-DEV_LIB}" />
         <pathelement location="${GWT-USER_LIB}" />
-        <pathelement location="${JEPRIA_LIB}" />
+        <pathelement location="${JEPRIA-GWT_LIB}" />
         <pathelement location="${JEPRIA-TEST_LIB}" />
         <pathelement location="${GWT-LOG_LIB}" />
         <pathelement location="${GWT-THEME_LIB}" />
@@ -564,7 +564,7 @@
         <pathelement location="src/java" />
         <pathelement location="build-test" />
         <pathelement location="${GWT-USER_LIB}" />
-        <pathelement location="${JEPRIA_LIB}" />
+        <pathelement location="${JEPRIA-GWT_LIB}" />
         <pathelement location="${JEPRIA-TEST_LIB}" />
         <pathelement location="${JUNIT_LIB}" />
         <pathelement location="${LOG4J_LIB}" />
@@ -640,7 +640,7 @@
     <junit fork="yes" printsummary="yes">
       <classpath>
         <pathelement location="${JUNIT_LIB}"/>
-        <pathelement location="${JEPRIA_LIB}"/>
+        <pathelement location="${JEPRIA-GWT_LIB}"/>
         <pathelement location="${MOCKITO-CORE_LIB}"/>
         <pathelement location="${OBJENESIS_LIB}"/>
         <pathelement location="${GWT-USER_LIB}"/>
@@ -662,7 +662,7 @@
         <fileset dir="src/java" includes="**/${MODULE_NAME_IN_PACKAGE}/**/client/**/*.java" />
         <fileset dir="src/java" includes="**/${MODULE_NAME_IN_PACKAGE}/**/shared/**/*.java" />
         <fileset dir="src/java" includes="**/${MODULE_NAME_IN_PACKAGE}/**/*.gwt.xml" />
-        <fileset file="${JEPRIA_LIB}" />
+        <fileset file="${JEPRIA-GWT_LIB}" />
       </sourcefiles>
       <!-- В GWT 2.7.0 при компиляции файлу Application.nocache.js выставляется дата изменения,
       совпадающая с датой Application.gwt.xml. Подробнее: https://gwt-review.googlesource.com/#/c/10520/
@@ -748,7 +748,7 @@
           <classpath>
             <path location="${GROOVY-ALL_LIB}" />
             <path location="${GWT-SERVLET_LIB}" />
-            <path location="${JEPRIA_LIB}" />
+            <path location="${JEPRIA-GWT_LIB}" />
             <path location="${JEPRIA-REPORT_LIB}" />
             <path location="${JFREECHART_LIB}" />
             <path location="${JRCOMPILER_LIB}" />
@@ -799,7 +799,7 @@
           <fileset file="${GWT-SERVLET_LIB}" />
           <fileset file="${JAR_TEMP}/${MODULE_NAME}-web.jar" />
           <fileset file="${JCOMMON_LIB}" />
-          <fileset file="${JEPRIA_LIB}" />
+          <fileset file="${JEPRIA-GWT_LIB}" />
           <fileset file="${JSTL_LIB}" />
           <fileset file="${LOG4J_LIB}" />
           <fileset file="${STANDARD_LIB}" />

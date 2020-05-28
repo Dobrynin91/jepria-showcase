@@ -54,8 +54,8 @@ public class FeatureJaxrsAdapter extends JaxrsAdapterBase {
   @GET
   @Path("/{recordId}")
   public Response getRecordById(@Pattern(regexp = "\\d+", message = "ID must be an integer") @PathParam("recordId") String recordId) {
-    FeatureDto result = (FeatureDto) entityEndpointAdapter.getRecordById(recordId);
-    return Response.ok(result).build();
+    FeatureDto responseBody = (FeatureDto) entityEndpointAdapter.getRecordById(recordId);
+    return Response.ok(responseBody).build();
   }
 
   @POST

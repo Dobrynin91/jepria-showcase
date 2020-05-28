@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.jepria.jepriashowcase</groupId>
@@ -17,7 +17,8 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <jersey.version>2.29</jersey.version>
     <antcontrib.version>1.0b3</antcontrib.version>
-    <jepria.version>11.1.0-SNAPSHOT</jepria.version>
+    <jepria-gwt.version>11.1.0-SNAPSHOT</jepria-gwt.version>
+    <jepria-rest.version>11.1.0-SNAPSHOT</jepria-rest.version>
     <jepriatoolkit.version>7.15.0</jepriatoolkit.version>
     <tomcat.version>7.0.68</tomcat.version>
     <log4j.version>1.2.17</log4j.version>
@@ -121,8 +122,14 @@
     <!-- JepRia -->
     <dependency>
       <groupId>org.jepria</groupId>
-      <artifactId>jepria</artifactId>
-      <version>${jepria.version}</version>
+      <artifactId>jepria-rest</artifactId>
+      <version>${jepria-rest.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jepria</groupId>
+      <artifactId>jepria-gwt</artifactId>
+      <version>${jepria-gwt.version}</version>
       <scope>compile</scope>
     </dependency>
     <!-- javax needs for compilation -->
@@ -410,10 +417,10 @@
             <id>update-jepria-snapshot</id>
             <phase>validate</phase>
             <configuration>
-              <file>${BIN_HOME}/deploy/org/jepria/jepria/${jepria.version}/jepria-${jepria.version}.jar</file>
+              <file>${BIN_HOME}/deploy/org/jepria/jepria-rest/${jepria-rest.version}/jepria-${jepria-rest.version}.jar</file>
               <groupId>org.jepria</groupId>
-              <artifactId>jepria</artifactId>
-              <version>${jepria.version}</version>
+              <artifactId>jepria-rest</artifactId>
+              <version>${jepria-rest.version}</version>
               <packaging>jar</packaging>
             </configuration>
             <goals>
@@ -459,7 +466,7 @@
         </executions>
       </plugin>
 
-    </plugins>	
+    </plugins>
   </build>
 
 </project>
